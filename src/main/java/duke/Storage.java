@@ -96,6 +96,7 @@ public class Storage {
      * @param input
      */
     public void writeFile(List<Task> input, String location){
+        assert input != null;
         try {
             FileWriter myWriter = new FileWriter(location);
             for(Task cur: input) {

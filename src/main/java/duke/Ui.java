@@ -38,6 +38,7 @@ public class Ui {
      * @param size The current number of tasks
      */
     public String showAddCommand(Task task,int size) {
+        assert task != null;
         return "Got it. I've added this task:\n " + task.toString() + "\nNow you have " + size +" tasks in the list.";
     }
 
@@ -47,6 +48,7 @@ public class Ui {
      * @param size The current number of tasks
      */
     public String showDelete(Task task,int size) {
+        assert task != null;
         return " Noted. I've removed this task:\n" + " " + task.toString() +"\nNow you have " + size +" tasks in the list." ;
     }
 
@@ -55,6 +57,7 @@ public class Ui {
      * @param task The task to be marked
      */
     public String showMark(Task task) {
+        assert task != null;
         return "Nice! I've marked this task as done:" + " " + task.toString();
     }
 
@@ -63,6 +66,7 @@ public class Ui {
      * @param task The task to be unmarked
      */
     public String showUnmark(Task task) {
+        assert task != null;
         return "OK, I've marked this task as not done yet:" + " " + task.toString();
     }
 

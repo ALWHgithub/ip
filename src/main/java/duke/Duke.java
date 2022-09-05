@@ -15,6 +15,7 @@ public class Duke {
     public String getResponse(String input) {
         try {
             Command c = Parser.parse(input);
+            taskList = new TaskList(storage.readFile("duke.txt"));
             return c.execute(taskList, storage, ui);
         } catch (DukeException e) {
             return e.getMessage();
